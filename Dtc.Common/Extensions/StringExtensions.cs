@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -339,6 +340,22 @@ namespace Dtc.Common.Extensions
         {
             var addCount = extendToLength - (s ?? string.Empty).Length;
             return (addCount > 0) ? s + new string(extendChar, addCount) : s;
+        }
+
+        public static string RemoveWhitespace(this string input)
+        {
+            return new string(input.Where(c => (c == ' ') || !char.IsWhiteSpace(c)).ToArray());
+        }
+
+
+        public static string RemovePathInvalidChars(this string fileName)
+        {
+            var invalidChars = new string(Path.GetInvalidFileNameChars()) + new string(Path.GetInvalidPathChars());
+            foreach (char ch in invalidChars)
+            {
+                fileName = fileName.Replace(ch.ToString(), string.Empty);
+            }
+            return fileName;
         }
     }
 }
