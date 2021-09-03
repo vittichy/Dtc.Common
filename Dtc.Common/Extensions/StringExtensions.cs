@@ -11,6 +11,9 @@ namespace Dtc.Common.Extensions
     /// </summary>
     public static class StringExtensions
     {
+        /// <summary>
+        /// Encode to Base64
+        /// </summary>
         public static string EncodeToBase64(this string value)
         {
             var toEncodeAsBytes = Encoding.ASCII.GetBytes(value);
@@ -18,6 +21,9 @@ namespace Dtc.Common.Extensions
             return base64Str;
         }
 
+        /// <summary>
+        /// Decode from Base64
+        /// </summary>
         static public string DecodeFromBase64(this string value)
         {
             var encodedDataAsBytes = Convert.FromBase64String(value);
