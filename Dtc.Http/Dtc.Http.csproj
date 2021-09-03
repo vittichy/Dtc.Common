@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>VitTichy.Dtc.Http</PackageId>
+    <Authors>Vit Tichy</Authors>
+    <Company>Dtc</Company>
+    <Version>1.0.2</Version>
+  </PropertyGroup>
+
+</Project>

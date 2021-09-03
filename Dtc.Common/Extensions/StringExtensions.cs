@@ -215,7 +215,6 @@ namespace Dtc.Common.Extensions
             return value.SubstrTo(existingChar);
         }
 
-
         public static string SubstrFrom(this string value, string fromStr)
         {
             if (string.IsNullOrEmpty(value) || string.IsNullOrEmpty(fromStr))
@@ -254,6 +253,16 @@ namespace Dtc.Common.Extensions
                 return value.Substring(startIndex, (endIndex - startIndex) + 1);
             }
             return null;
+        }
+
+        public static string SubstrFromLastChar(this string value, char ch)
+        {
+            int chIndex = value.LastIndexOf(ch);
+            if ((chIndex > 0) && ((chIndex + 1) < value.Length))
+            {
+                return value.Substring(chIndex + 1, value.Length - chIndex - 1);
+            }
+            return string.Empty;
         }
 
 
@@ -356,6 +365,19 @@ namespace Dtc.Common.Extensions
                 fileName = fileName.Replace(ch.ToString(), string.Empty);
             }
             return fileName;
+        }
+
+        public static string IncrementStringNumber(this string value, int i)
+        {
+            int number;
+            if (int.TryParse(value, out number))
+            {
+                number += i;
+                var format = string.Format("D{0}", value.Length);
+                var result = number.ToString(format);
+                return result;
+            }
+            return null;
         }
 
     }
