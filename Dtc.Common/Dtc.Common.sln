@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dtc.Common", "Dtc.Common.csproj", "{8DB485D5-26A9-4E75-AA87-7C21BC8104A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dtc.Common", "Dtc.Common.csproj", "{8DB485D5-26A9-4E75-AA87-7C21BC8104A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dtc.Common.Tests", "..\Dtc.Common.Tests\Dtc.Common.Tests.csproj", "{837E7DCD-962A-4384-A6E6-A416948B8DFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dtc.Common.Tests", "..\Dtc.Common.Tests\Dtc.Common.Tests.csproj", "{837E7DCD-962A-4384-A6E6-A416948B8DFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dtc.Http", "..\Dtc.Http\Dtc.Http.csproj", "{C2392238-4802-470E-8F7A-C645ABFDA878}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{837E7DCD-962A-4384-A6E6-A416948B8DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{837E7DCD-962A-4384-A6E6-A416948B8DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{837E7DCD-962A-4384-A6E6-A416948B8DFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2392238-4802-470E-8F7A-C645ABFDA878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2392238-4802-470E-8F7A-C645ABFDA878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2392238-4802-470E-8F7A-C645ABFDA878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2392238-4802-470E-8F7A-C645ABFDA878}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
